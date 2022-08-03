@@ -1,0 +1,224 @@
+body {
+  font-family: sans-serif;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: min(250px, 35%) 1fr;
+  grid-template-rows: auto 70px;
+  grid-template-areas: 
+    "nav main"
+    "nav footer";
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  margin: 0px;
+  border:1px solid black;
+}
+
+main {
+  padding: 10px;
+  grid-area: main;
+}
+
+.code-div {
+  background-color: rgb(235, 235, 235);
+  padding: 7px;
+  border-radius: 7px;
+  border-left: 7px solid green;
+  min-width: 150px;
+  min-height: 80px;
+  width: fit-content;
+}
+
+.output-div {
+  background-color: rgb(235, 235, 235);
+  padding: 7px;
+  border-radius: 7px;
+  border-left: 7px solid rgb(0, 0, 0);
+  min-width: 150px;
+  min-height: 80px;
+  width: fit-content;
+}
+
+header {
+  font-size: 2rem;
+  padding: 10px 0px;
+  margin: 0px;
+  font-weight: 550;
+}
+
+#nav-header {
+  position: sticky;
+  top: 0;
+  padding: 20px 10px;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  grid-area: nav;
+  position: fixed;
+  overflow-y: scroll;
+  width: 250px;
+  max-width: 35%;
+  height: 100%;
+  max-height: 100%;
+  border-right: 2px solid grey;
+  z-index: 999;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  border-top: 1px solid black;
+  padding: 10px 10px;
+  padding-right: 0px;
+  font-size: 1rem;
+  background-color: rgb(255, 255, 255);
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, padding;
+  transition-duration: 0.1s;
+}
+
+.nav-link:hover {
+  padding: 20px 25px;
+  padding-right: 0px;
+  background-color: rgb(241, 241, 241);
+  transition-property: background-color, padding;
+  transition-duration: 0.1s;
+}
+
+.nav-link:active {
+  padding: 20px 20px;
+  padding-right: 0px;
+  background-color: rgb(255, 255, 255);
+  transition-property: background-color, padding;
+  transition-duration: 0.05s;
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(235, 235, 235);
+  padding: 10px;
+}
+
+#git-link {
+  text-decoration: none;
+  color: blue;
+}
+
+#git-link:hover {
+  color: rgb(0, 110, 255);
+}
+
+li {
+  padding: 3px;
+}
+
+.code-sin {
+  font-size: 1.1rem;
+  background-color: rgb(235, 235, 235);
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+
+.pre-embed-youtube {
+  width: 100%;
+  max-width: 600px;
+}
+
+.embed-youtube {
+  position: relative;
+  max-height: 0px;
+  padding-bottom: 60%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.embed-youtube iframe,
+.embed-youtube object,
+.embed-youtube embed {
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 700px) {
+  .nav-link {
+    color: black;
+    text-decoration: none;
+    border-top: 1px solid black;
+    padding: 20px 15px;
+    padding-right: 0px;
+    font-size: 1rem;
+    background-color: rgb(255, 255, 255);
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, padding;
+    transition-duration: 0.1s;
+  }
+  
+  .nav-link:hover {
+    padding: 20px 15px;
+    padding-right: 0px;
+    transition-property: background-color, padding;
+    transition-duration: 0.1s;
+  }
+  
+  .nav-link:active {
+    padding: 20px 20px;
+    padding-right: 0px;
+    background-color: rgb(255, 255, 255);
+    transition-property: background-color, padding;
+    transition-duration: 0.05s;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-family: sans-serif;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 220px auto 50px;
+    grid-template-areas: 
+      "nav"
+      "main"
+      "footer";
+  }
+
+  #navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    grid-area: nav;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    border: 2px solid grey;
+    z-index: 999;
+  }
+
+  #nav-header {
+    padding: 10px 20px;
+  }
+
+  .main-section {
+    padding-top: 220px;
+    margin-top: -220px;
+  }
+}
