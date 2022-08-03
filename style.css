@@ -10,13 +10,45 @@ body {
 }
 
 table {
+  max-width: 630px;
   width: 100%;
   border-collapse: collapse;
 }
 
+#fixContainer {
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: rgb(230, 230, 230);
+  box-shadow: 1px 1px 5px 2px rgb(209, 209, 209);
+  max-width: 600px;
+}
+
 th, td {
-  margin: 0px;
   border:1px solid black;
+  padding: 5px;
+}
+
+.weekFix {
+  margin-bottom: 10px;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 1px 1px 5px 2px rgb(209, 209, 209);
+}
+
+.weekFix > table > tbody > tr > th {
+  border: none;
+  border-bottom: 1px solid rgb(194, 194, 194);
+  text-align: left;
+  
+}
+
+.weekFix > table > tbody > tr > td {
+  border: none;
+  border-bottom: 1px solid rgb(224, 224, 224);
+  text-align: center;
 }
 
 main {
