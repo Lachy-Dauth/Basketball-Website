@@ -56,26 +56,6 @@ main {
   grid-area: main;
 }
 
-.code-div {
-  background-color: rgb(235, 235, 235);
-  padding: 7px;
-  border-radius: 7px;
-  border-left: 7px solid green;
-  min-width: 150px;
-  min-height: 80px;
-  width: fit-content;
-}
-
-.output-div {
-  background-color: rgb(235, 235, 235);
-  padding: 7px;
-  border-radius: 7px;
-  border-left: 7px solid rgb(0, 0, 0);
-  min-width: 150px;
-  min-height: 80px;
-  width: fit-content;
-}
-
 header {
   font-size: 2rem;
   padding: 10px 0px;
@@ -156,11 +136,9 @@ li {
   padding: 3px;
 }
 
-.code-sin {
-  font-size: 1.1rem;
-  background-color: rgb(235, 235, 235);
-  padding: 2px 5px;
-  border-radius: 2px;
+.logo {
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .pre-embed-youtube {
